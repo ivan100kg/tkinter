@@ -8,7 +8,7 @@ class ScrolledCanvas(Frame):
         self.pack(expand=YES, fill=BOTH)
         canv = Canvas(self, bg=color, relief=SUNKEN)
         canv.config(width=300, height=200)
-        canv.config(scrollregion=(0, 0, 300, 1000))
+        canv.config(scrollregion=(0, 0, 300, 10000))
         canv.config(highlightthickness=0)
         sbar = Scrollbar(self)
         sbar.config(command=canv.yview)
@@ -21,7 +21,7 @@ class ScrolledCanvas(Frame):
         canv.bind('<Double-1>', self.onDoubleClick) # установить обр. события
         self.canvas = canv
     def fillContent(self, canv):
-        for i in range(10):
+        for i in range(100):
             canv.create_text(150, 50+(i*100), text='spam'+str(i),fill='beige')
     def onDoubleClick(self, event):
         print(event.x, event.y)

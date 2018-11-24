@@ -14,14 +14,15 @@ class CanvasEventsDemo:
         canvas.bind('<B1-Motion>', self.onGrow) # движение мыши с зажатой лкм
         self.canvas = canvas
         self.drawn = None
+        self.size = 3
 
     def onStart(self, event):
-        self.start = event
+        self.canvas.create_oval(event.x-, event.y-1, event.x+1, event.y+1, fill='white')
 
     def onGrow(self, event):
         canvas = event.widget
         # if self.drawn: canvas.delete(self.drawn)
-        objectId = self.canvas.create_oval(event.x, event.y, event.x,event.y)
+        objectId = self.canvas.create_oval(event.x, event.y, event.x, event.y)
         self.drawn = objectId
 
 if __name__ == '__main__':

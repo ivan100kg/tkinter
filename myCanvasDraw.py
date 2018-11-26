@@ -17,7 +17,7 @@ class CanvasEventsDemo:
         self.size = 3
 
     def onStart(self, event):
-        self.canvas.create_oval(event.x-, event.y-1, event.x+1, event.y+1, fill='white')
+        self.canvas.create_oval(event.x-self.size, event.y-self.size, event.x+self.size, event.y+self.size, fill='white')
 
     def onGrow(self, event):
         canvas = event.widget

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Created by Ivar at 24.11.2018
 # разбираюсь самостоятельно в рисовании
 
 
